@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookReader - Read Books Beautifully</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Poppins,sans-serif;
+background:#08111f;
+color:white;
+overflow-x:hidden;
+}
+a{text-decoration:none;color:white}
+.container{width:min(1100px,92%);margin:auto}
+header{
+padding:20px 0;
+position:sticky;
+top:0;
+backdrop-filter:blur(12px);
+background:rgba(8,17,31,.75);
+z-index:99;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:22px;
+font-weight:700;
+}
+.logo img{
+width:42px;
+height:42px;
+border-radius:12px;
+}
+.hero{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+align-items:center;
+padding:70px 0;
+gap:40px;
+}
+.hero h1{
+font-size:52px;
+line-height:1.05;
+margin-bottom:20px;
+}
+.hero p{
+font-size:18px;
+color:#b7c7dd;
+margin-bottom:30px;
+}
+.buttons{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+}
+.btn{
+padding:15px 28px;
+border-radius:16px;
+font-weight:600;
+transition:.3s;
+display:inline-flex;
+align-items:center;
+gap:10px;
+}
+.primary{
+background:#2563eb;
+box-shadow:0 15px 40px rgba(37,99,235,.4);
+}
+.primary:hover{
+transform:translateY(-4px);
+background:#3b82f6;
+}
+.secondary{
+border:1px solid #2f4d72;
+background:#0d1b2a;
+}
+.phone{
+display:flex;
+justify-content:center;
+}
+.phone img{
+width:100%;
+max-width:320px;
+border-radius:36px;
+box-shadow:0 25px 70px rgba(0,0,0,.5);
+}
+.section{
+padding:70px 0;
+}
+.title{
+text-align:center;
+font-size:36px;
+margin-bottom:12px;
+}
+.subtitle{
+text-align:center;
+color:#9fb3cc;
+margin-bottom:45px;
+}
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+.card{
+background:#0d1b2a;
+padding:28px;
+border-radius:22px;
+border:1px solid #18304d;
+transition:.35s;
+}
+.card:hover{
+transform:translateY(-8px);
+border-color:#2563eb;
+}
+.card span{
+font-size:34px;
+display:block;
+margin-bottom:12px;
+}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:18px;
+}
+.gallery img{
+width:100%;
+border-radius:24px;
+transition:.35s;
+box-shadow:0 15px 35px rgba(0,0,0,.4);
+}
+.gallery img:hover{
+transform:scale(1.04);
+}
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+.step{
+background:#0d1b2a;
+padding:24px;
+border-radius:20px;
+border:1px solid #18304d;
+}
+.step b{
+display:inline-flex;
+width:36px;
+height:36px;
+align-items:center;
+justify-content:center;
+background:#2563eb;
+border-radius:50%;
+margin-bottom:12px;
+}
+.cta{
+text-align:center;
+background:linear-gradient(135deg,#0d1b2a,#102543);
+padding:60px 20px;
+border-radius:30px;
+border:1px solid #23456c;
+}
+.cta h2{
+font-size:38px;
+margin-bottom:16px;
+}
+footer{
+padding:40px 0;
+text-align:center;
+color:#8aa0b8;
+border-top:1px solid #18304d;
+margin-top:50px;
+}
+@media(max-width:850px){
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+.buttons{
+justify-content:center;
+}
+.hero h1{
+font-size:40px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">
+<img src="https://muhammedomor-studio.github.io/bookreader/logo.jpg">
+BookReader
+</div>
+<a href="#download" class="btn secondary">Download</a>
+</nav>
+</div>
+</header>
+
+<section class="hero container">
+<div>
+<h1>Read Books Beautifully</h1>
+<p>
+BookReader is a clean and modern Android reading app designed for a comfortable reading experience with an elegant interface and smooth performance.
+</p>
+
+<div class="buttons">
+<a class="btn primary" id="download"
+href="https://github.com/muhammedomor-studio/bookreader/releases/download/v1.0.0/BookReader.apk">
+⬇ Download APK
+</a>
+
+<a class="btn secondary" href="#screenshots">
+📱 Screenshots
+</a>
+</div>
+</div>
+
+<div class="phone">
+<img src="https://muhammedomor-studio.github.io/bookreader/mockup-1.jpg">
+</div>
+</section>
+
+<section class="section container">
+<h2 class="title">Why Choose BookReader?</h2>
+<p class="subtitle">Everything you need for an enjoyable reading experience.</p>
+
+<div class="features">
+
+<div class="card">
+<span>📚</span>
+<h3>Easy Reading</h3>
+<p>Comfortable reading with a clean interface.</p>
+</div>
+
+<div class="card">
+<span>⚡</span>
+<h3>Fast Performance</h3>
+<p>Lightweight and optimized for Android devices.</p>
+</div>
+
+<div class="card">
+<span>🎨</span>
+<h3>Modern Design</h3>
+<p>Elegant navy blue inspired premium UI.</p>
+</div>
+
+<div class="card">
+<span>📱</span>
+<h3>Mobile Friendly</h3>
+<p>Designed specifically for smartphone users.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section container" id="screenshots">
+
+<h2 class="title">App Screenshots</h2>
+<p class="subtitle">Take a look at BookReader before downloading.</p>
+
+<div class="gallery">
+
+<img src="https://muhammedomor-studio.github.io/bookreader/mockup-1.jpg">
+<img src="https://muhammedomor-studio.github.io/bookreader/mockup-2.jpg">
+<img src="https://muhammedomor-studio.github.io/bookreader/mockup-3.jpg">
+<img src="https://muhammedomor-studio.github.io/bookreader/mockup-4.jpg">
+<img src="https://muhammedomor-studio.github.io/bookreader/mockup-5.jpg">
+
+</div>
+
+</section>
+
+<section class="section container">
+
+<h2 class="title">How to Install</h2>
+
+<div class="steps">
+
+<div class="step">
+<b>1</b>
+<h3>Download</h3>
+<p>Tap the Download APK button.</p>
+</div>
+
+<div class="step">
+<b>2</b>
+<h3>Allow Install</h3>
+<p>Enable Install from Unknown Sources if needed.</p>
+</div>
+
+<div class="step">
+<b>3</b>
+<h3>Open & Enjoy</h3>
+<p>Launch BookReader and start reading.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section container">
+
+<div class="cta">
+<h2>Start Reading Today</h2>
+<p style="margin-bottom:25px;color:#b7c7dd">
+Download the latest version of BookReader and enjoy a smooth reading experience.
+</p>
+
+<a class="btn primary"
+href="https://github.com/muhammedomor-studio/bookreader/releases/download/v1.0.0/BookReader.apk">
+⬇ Download Now
+</a>
+
+</div>
+
+</section>
+
+<footer>
+<div class="container">
+<p>© 2026 BookReader • Created by Muhammed Omor Studio</p>
+</div>
+</footer>
+
+</body>
+</html>
